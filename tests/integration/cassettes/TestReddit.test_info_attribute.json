@@ -1,0 +1,221 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2020-05-09T20:25:31",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "grant_type=client_credentials"
+        },
+        "headers": {
+          "Accept": [
+            "*/*"
+          ],
+          "Accept-Encoding": [
+            "identity"
+          ],
+          "Authorization": [
+            "Basic <BASIC_AUTH>"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Length": [
+            "29"
+          ],
+          "Content-Type": [
+            "application/x-www-form-urlencoded"
+          ],
+          "User-Agent": [
+            "praw_py<TEST_SUBREDDIT> PRAW/7.0.1.dev0 prawcore/1.3.0"
+          ]
+        },
+        "method": "POST",
+        "uri": "https://www.reddit.com/api/v1/access_token"
+      },
+      "response": {
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"access_token\": \"<ACCESS_TOKEN>\", \"token_type\": \"bearer\", \"expires_in\": 3600, \"scope\": \"*\"}"
+        },
+        "headers": {
+          "Accept-Ranges": [
+            "bytes"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Length": [
+            "106"
+          ],
+          "Content-Type": [
+            "application/json; charset=UTF-8"
+          ],
+          "Date": [
+            "Sat, 09 May 2020 20:25:31 GMT"
+          ],
+          "Server": [
+            "snooserv"
+          ],
+          "Set-Cookie": [
+            "edgebucket=apFK38Wf9zGLjzzkKZ; Domain=reddit.com; Max-Age=63071999; Path=/;  secure"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=15552000; includeSubDomains; preload"
+          ],
+          "Via": [
+            "1.1 varnish"
+          ],
+          "X-Cache": [
+            "MISS"
+          ],
+          "X-Cache-Hits": [
+            "0"
+          ],
+          "X-Moose": [
+            "majestic"
+          ],
+          "X-Served-By": [
+            "cache-lga21953-LGA"
+          ],
+          "X-Timer": [
+            "S1589055931.450362,VS0,VE55"
+          ],
+          "cache-control": [
+            "max-age=0, must-revalidate"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "x-frame-options": [
+            "SAMEORIGIN"
+          ],
+          "x-reddit-loid": [
+            "00000000006fis5ikg.2.1589055931482.Z0FBQUFBQmV0eEc3cWQwSnctN2NfZFhzUndDS1hhVjRzZHpITGxpbHlUYmp6SmZEMmpLeU52MlRSM2g4QkZZUEpxaTZ1bkdQTFNvNlQwSk8xc3pjaWE0SXZKdGotVkhvRzFRREhWMGNEamdwQ3ZMT0xJVXZFOWJaYkhKb2Q3SG00VjF6ejJPN0pPbmQ"
+          ],
+          "x-xss-protection": [
+            "1; mode=block"
+          ]
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://www.reddit.com/api/v1/access_token"
+      }
+    },
+    {
+      "recorded_at": "2020-05-09T20:25:31",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Accept": [
+            "*/*"
+          ],
+          "Accept-Encoding": [
+            "identity"
+          ],
+          "Authorization": [
+            "bearer <ACCESS_TOKEN>"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Cookie": [
+            "edgebucket=apFK38Wf9zGLjzzkKZ"
+          ],
+          "User-Agent": [
+            "praw_py<TEST_SUBREDDIT> PRAW/7.0.1.dev0 prawcore/1.3.0"
+          ]
+        },
+        "method": "GET",
+        "uri": "https://oauth.reddit.com/api/info/?id=t3_ggixoz&raw_json=1"
+      },
+      "response": {
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"kind\": \"Listing\", \"data\": {\"modhash\": \"\", \"dist\": 1, \"children\": [{\"kind\": \"t3\", \"data\": {\"approved_at_utc\": null, \"subreddit\": \"redditdev\", \"selftext\": \"So, I fetch a submission with `list([Reddit.info(\\\"t3_\\u003Cid\\u003E\\\")])[n]`. But, when I try to access the submission info, a call is made to https:\\\\/\\\\/oauth\\\\.reddit\\\\.com/comments/\\u003Cid\\u003E. I have no need for the comment forest for the submission. Is there a way to turn this off?\", \"author_fullname\": \"t2_4e5thr95\", \"saved\": false, \"mod_reason_title\": null, \"gilded\": 0, \"clicked\": false, \"title\": \"referencing submission.over_18 makes unnecessary api call\", \"link_flair_richtext\": [], \"subreddit_name_prefixed\": \"r/redditdev\", \"hidden\": false, \"pwls\": 6, \"link_flair_css_class\": \"\", \"downs\": 0, \"thumbnail_height\": null, \"hide_score\": false, \"name\": \"t3_ggixoz\", \"quarantine\": false, \"link_flair_text_color\": \"dark\", \"upvote_ratio\": 1.0, \"author_flair_background_color\": null, \"subreddit_type\": \"public\", \"ups\": 3, \"total_awards_received\": 0, \"media_embed\": {}, \"thumbnail_width\": null, \"author_flair_template_id\": null, \"is_original_content\": false, \"user_reports\": [], \"secure_media\": null, \"is_reddit_media_domain\": false, \"is_meta\": false, \"category\": null, \"secure_media_embed\": {}, \"link_flair_text\": \"PRAW\", \"can_mod_post\": false, \"score\": 3, \"approved_by\": null, \"author_premium\": false, \"thumbnail\": \"self\", \"edited\": false, \"author_flair_css_class\": null, \"author_flair_richtext\": [], \"gildings\": {}, \"content_categories\": null, \"is_self\": true, \"mod_note\": null, \"created\": 1589071947.0, \"link_flair_type\": \"text\", \"wls\": 6, \"removed_by_category\": null, \"banned_by\": null, \"author_flair_type\": \"text\", \"domain\": \"self.redditdev\", \"allow_live_comments\": false, \"selftext_html\": \"\\u003C!-- SC_OFF --\\u003E\\u003Cdiv class=\\\"md\\\"\\u003E\\u003Cp\\u003ESo, I fetch a submission with \\u003Ccode\\u003Elist([Reddit.info(\\u0026quot;t3_\\u0026lt;id\\u0026gt;\\u0026quot;)])[n]\\u003C/code\\u003E. But, when I try to access the submission info, a call is made to https://oauth.reddit.com/comments/\\u0026lt;id\\u0026gt;. I have no need for the comment forest for the submission. Is there a way to turn this off?\\u003C/p\\u003E\\n\\u003C/div\\u003E\\u003C!-- SC_ON --\\u003E\", \"likes\": null, \"suggested_sort\": null, \"banned_at_utc\": null, \"view_count\": null, \"archived\": false, \"no_follow\": true, \"is_crosspostable\": false, \"pinned\": false, \"over_18\": false, \"all_awardings\": [], \"awarders\": [], \"media_only\": false, \"link_flair_template_id\": \"49bb3d06-0dad-11e7-b897-0e42c2400b7a\", \"can_gild\": false, \"spoiler\": false, \"locked\": false, \"author_flair_text\": null, \"treatment_tags\": [], \"visited\": false, \"removed_by\": null, \"num_reports\": null, \"distinguished\": null, \"subreddit_id\": \"t5_2qizd\", \"mod_reason_by\": null, \"removal_reason\": null, \"link_flair_background_color\": \"\", \"id\": \"ggixoz\", \"is_robot_indexable\": true, \"report_reasons\": null, \"author\": \"Galagamesh\", \"discussion_type\": null, \"num_comments\": 5, \"send_replies\": true, \"whitelist_status\": \"all_ads\", \"con<TEST_SUBREDDIT>_mode\": false, \"mod_reports\": [], \"author_patreon_flair\": false, \"author_flair_text_color\": null, \"permalink\": \"/r/redditdev/comments/ggixoz/referencing_submissionover_18_makes_unnecessary/\", \"parent_whitelist_status\": \"all_ads\", \"stickied\": false, \"url\": \"https://www.reddit.com/r/redditdev/comments/ggixoz/referencing_submissionover_18_makes_unnecessary/\", \"subreddit_subscribers\": 35860, \"created_utc\": 1589043147.0, \"num_crossposts\": 0, \"media\": null, \"is_video\": false}}], \"after\": null, \"before\": null}}"
+        },
+        "headers": {
+          "Accept-Ranges": [
+            "bytes"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Length": [
+            "3536"
+          ],
+          "Content-Type": [
+            "application/json; charset=UTF-8"
+          ],
+          "Date": [
+            "Sat, 09 May 2020 20:25:31 GMT"
+          ],
+          "Server": [
+            "snooserv"
+          ],
+          "Set-Cookie": [
+            "loid=00000000006fis5ikg.2.1589055931482.Z0FBQUFBQmV0eEc3dUdhQ2NQMWczdEQ2VDctYkppRjdIakZPRUdDTnV1QzU0NzlGYmxHdFE1N096TlAzbnNBalJiSXZ6NHprV19pZnh3UGtjdXNsel9KX1BrbkpCanE4Y1VUbXplM1B1SkZ2Z0IwVk02SGs4Y3FPVmcwUTZFUGZPbFU4WVpQczZrVGU; Domain=reddit.com; Max-Age=63071999; Path=/; expires=Mon, 09-May-2022 20:25:31 GMT; secure; SameSite=None; Secure",
+            "session_tracker=TiG2WAAylMYQSMB0J3.0.1589055931604.Z0FBQUFBQmV0eEc3Ny1wQ1k3aW1ma2R5dWdQbG8yOTlvZkhlNXl1c0tTelBLSGQyOGtzQl9XM2VKVTlKTV9BOENpd3NETFR4U2tDTkdmUmg0amtVRkx3ODFtS3BBOV9LeXFuOUNmbXk1UHhnYWFaVHNsWFl1R0FJVzh3dS03amlKbXMzT0MyRkxWdG8; Domain=reddit.com; Max-Age=7199; Path=/; expires=Sat, 09-May-2020 22:25:31 GMT; secure; SameSite=None; Secure",
+            "csv=1; Max-Age=63072000; Domain=.reddit.com; Path=/; Secure; SameSite=None"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=15552000; includeSubDomains; preload"
+          ],
+          "Vary": [
+            "accept-encoding"
+          ],
+          "Via": [
+            "1.1 varnish"
+          ],
+          "X-Cache": [
+            "MISS"
+          ],
+          "X-Cache-Hits": [
+            "0"
+          ],
+          "X-Moose": [
+            "majestic"
+          ],
+          "X-Served-By": [
+            "cache-lga21975-LGA"
+          ],
+          "X-Timer": [
+            "S1589055932.559343,VS0,VE66"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "access-control-expose-headers": [
+            "X-Moose"
+          ],
+          "cache-control": [
+            "max-age=0, must-revalidate"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "x-frame-options": [
+            "SAMEORIGIN"
+          ],
+          "x-ua-compatible": [
+            "IE=edge"
+          ],
+          "x-xss-protection": [
+            "1; mode=block"
+          ]
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://oauth.reddit.com/api/info/?id=t3_ggixoz&raw_json=1"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.8.1"
+}

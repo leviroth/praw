@@ -40,6 +40,11 @@ class TestReddit(IntegrationTest):
         for item in results:
             assert isinstance(item, RedditBase)
 
+    def test_info_attribute(self):
+        with self.recorder.use_cassette("TestReddit.test_info_attribute"):
+            results = list(self.reddit.info(fullnames=["t3_ggixoz"]))
+        assert not results[0].over_18
+
     def test_info_url(self):
         with self.recorder.use_cassette("TestReddit.test_info_url"):
             results = list(self.reddit.info(url="youtube.com"))
