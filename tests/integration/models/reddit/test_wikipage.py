@@ -24,6 +24,21 @@ class TestWikiPage(IntegrationTest):
         with self.recorder.use_cassette("TestWikiPage.test_edit"):
             page.edit("PRAW updated")
 
+    def test_edit__conflict_ignored(self):
+        from multiprocessing.pool import ThreadPool
+
+        subreddit = self.reddit.subreddit(pytest.placeholders.test_subreddit)
+        page = WikiPage(self.reddit, subreddit, "test")
+        previous = "43c1c1b7-29a8-11eb-a4fa-0e019e545417"
+
+        def edit_page(content):
+            page.edit(content, reason=content, previous=previous)
+
+        self.reddit.read_only = False
+        with self.recorder.use_cassette("TestWikiPage.test_edit__conflict_ignored"):
+            with ThreadPool() as pool:
+                pool.map(edit_page, ["A", "B"])
+
     def test_edit__with_reason(self):
         subreddit = self.reddit.subreddit(pytest.placeholders.test_subreddit)
         page = WikiPage(self.reddit, subreddit, "test")
